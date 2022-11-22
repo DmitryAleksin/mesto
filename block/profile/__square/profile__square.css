@@ -1,0 +1,25 @@
+.profile__square {
+    border: 1px solid #FFFFFF;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: opacity;
+    background-color: black;
+}
+
+.profile__square:hover {
+    opacity: .6;
+}
+
+@media screen and (max-width: 610px) {
+    .profile__square {
+        width: 18px;
+        height: 18px;
+        margin-top: 8px;
+    }
+}

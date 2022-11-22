@@ -1,0 +1,44 @@
+
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+
+@import url(../block/page/page.css);
+@import url(../block/header/header.css);
+@import url(../block/header/__logo/header__logo.css);
+
+@import url(../block/profile/profile.css);
+@import url(../block/profile/__avatar/profile__avatar.css);
+@import url(../block/profile/__info/profile__info.css);
+@import url(../block/profile/__name/profile__name.css);
+@import url(../block/profile/__square/profile__square.css);
+@import url(../block/profile/__pen/profile__pen.css);
+@import url(../block/profile/__status/profile__status.css);
+@import url(../block/profile/__rectangle/profile__rectangle.css);
+@import url(../block/profile/__plus/profile__plus.css);
+@import url(../block/profile/__frame/profile__frame.css);
+
+@import url(../block/elements/elements.css);
+@import url(../block/elements/__element/elements__element.css);
+@import url(../block/elements/__name-element/elements__name-element.css);
+@import url(../block/elements/__photo-element/elements__photo-element.css);
+@import url(../block/elements/__info-element/elements__info-element.css);
+@import url(../block/elements/__heart-element/elements__heart-element.css);
+@import url(../block/elements/__blackHeart-element/elements__blackHeart-element.css);
+@import url(../block/direction/direction.css);
+
+@import url(../block/footer/footer.css);
+@import url(../block/footer/__copyright/footer__copyright.css);
+
+@import url(../block/popup/popup.css);
+@import url(../block/popup/__block/popup__block.css);
+@import url(../block/popup/__button-close/popup__button-close.css);
+@import url(../block/popup/__content/popup__content.css);
+@import url(../block/popup/__title/popup__title.css);
+@import url(../block/popup/__name/popup__name.css);
+@import url(../block/popup/__status/popup__status.css);
+@import url(../block/popup/__button-save/popup__button-save.css);
+@import url(../block/popup/_is-opened/popup_is-opened.css);
+@import url();
+@import url();
+@import url();
+@import url();

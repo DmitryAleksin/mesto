@@ -1,0 +1,27 @@
+.elements {
+    font-family: 'Inter', 'Arial', sans-serif;
+    margin: 51px 200px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 282px);
+    padding: 0;
+    gap: 20px 17px;
+}
+
+@media screen and (max-width: 1078px) {
+    .elements {
+        margin: 51px 100px 0;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .elements {
+        margin: 51px 20px 0;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .elements {
+        margin: 36px 19px 0;
+        gap: 20px;
+    }
+}

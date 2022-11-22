@@ -1,0 +1,17 @@
+.popup__name {
+    margin: 54px 0 0;
+    padding: 0 0 13px;
+    max-height: 14px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+@media screen and (max-width: 610px) {
+    .popup__status {
+        margin-top: 75px;
+    }
+}

@@ -1,0 +1,13 @@
+.popup__content {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin: 34px 0 0;
+}
+
+@media screen and (max-width: 610px) {
+    .popup__content {
+       margin-top: 25px;
+       min-width: 238px;
+    }
+}

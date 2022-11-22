@@ -1,0 +1,8 @@
+.elements__element {
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 361px;
+    border-radius: 10px;
+}

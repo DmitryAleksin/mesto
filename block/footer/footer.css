@@ -1,0 +1,24 @@
+.footer {
+    font-family: 'Inter', 'Arial', sans-serif;
+    max-height: 18px;
+    padding: 0;
+    margin: 67px 200px 0;
+}
+
+@media screen and (max-width: 1078px) {
+    .footer {
+        margin: 67px 100px 0;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .footer {
+        margin: 67px 20px 0;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .footer {
+        margin: 48px 19px;
+    }
+}

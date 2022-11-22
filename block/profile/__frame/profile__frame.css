@@ -1,0 +1,15 @@
+.profile__frame {
+    padding: 0;
+    width: 168.75px;
+    height: 129.5px;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 -19px;
+}
+
+@media screen and (max-width: 610px) {
+    .profile__frame {
+        height: 127.5px;
+        margin: -3.75px auto 0;
+    }
+}
