@@ -3,14 +3,16 @@
     border-radius: 2px;
     min-width: 150px;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-sizing: border-box;
     margin: auto 0 auto auto;
     cursor: pointer;
     transition: opacity;
     background-color: black;
+    background-image: url(../../../images/plus.svg);
+    background-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: 22px;
 }
 
 .profile__rectangle:hover {
@@ -20,5 +22,6 @@
 @media screen and (max-width: 610px) {
     .profile__rectangle {
         margin: 36px 0 0;
+        background-size: 16px;
     }
 }

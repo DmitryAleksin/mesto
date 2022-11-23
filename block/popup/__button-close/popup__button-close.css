@@ -2,7 +2,7 @@
     width: 32px;
     height: 32px;
     padding: 0;
-    background-image: url(../../../images/Close\ Icon.png);
+    background-image: url(../../../images/CloseIcon.svg);
     background-color: unset;
     background-repeat: no-repeat;
     object-fit: cover;
@@ -23,7 +23,7 @@
         width: 20px;
         height: 20px;
         top: -32px;
-        background-image: url(../../../images/Close\ Icon\ mini.png);
+        background-image: url(../../../images/CloseIconmini.svg);
         left: 264px;
     }
 }

@@ -1,5 +1,5 @@
 .elements__heart-element {
-    background-image: url(../../../images/heart.png);
+    background-image: url(../../../images/heart.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -8,6 +8,7 @@
     height: 19px;
     margin: 0;
     cursor: pointer;
+    border: none;
 }
 
 .elements__heart-element:hover {
