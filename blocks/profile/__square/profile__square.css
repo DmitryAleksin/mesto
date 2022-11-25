@@ -9,13 +9,13 @@
     margin-top: 15px;
     cursor: pointer;
     transition: opacity;
-    background-color: black;
     background-image: url(../../../images/pen1.svg);
     background-position: center;
     object-fit: contain;
     background-repeat: no-repeat;
     padding: 0;
     background-size: 10px;
+    background-color: transparent;
 }
 
 .profile__square:hover {

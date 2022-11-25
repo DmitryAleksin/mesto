@@ -9,8 +9,9 @@
     margin: 0;
     cursor: pointer;
     border: none;
+    background-color: transparent;
 }
 
 .elements__heart-element:hover {
-    opacity: .6;
+    opacity: .5;
 }

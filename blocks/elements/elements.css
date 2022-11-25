@@ -2,6 +2,7 @@
     font-family: 'Inter', 'Arial', sans-serif;
     margin: 51px 200px 0;
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, 282px);
     padding: 0;
     gap: 20px 17px;

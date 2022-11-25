@@ -1,13 +1,11 @@
 
-console.log('Привет!');
-
 const popupElement = document.querySelector('.popup');
 const popupCloseButtonElement = popupElement.querySelector('.popup__button-close');
 const popupOpenButtonElement = document.querySelector('.profile__square');
 
 const formElement = popupElement.querySelector('.popup__content');
-const nameInput = popupElement.querySelector('.popup__name');
-const statusInput = popupElement.querySelector('.popup__status');
+const nameInput = popupElement.querySelector('.popup__input_name');
+const statusInput = popupElement.querySelector('.popup__input_status');
 const profileName = document.querySelector('.profile__name');
 const profileStatus = document.querySelector('.profile__status');
 
@@ -21,9 +19,7 @@ const profileStatus = document.querySelector('.profile__status');
 //  }else{
 //      heartElement.classList.remove('clicked');
 //  }
-//  }
-//  Здравствуйте. Я совсем запутался, и не могу разобраться с лайками. 
-//  Подскажите пожалуйста как правильно написать функцию.  
+//  }  
 
 
 const openPopup = function () {
@@ -36,13 +32,13 @@ const closePopup = function () {
     popupElement.classList.remove('popup_is-opened')
 }
 
-const closePopupByClickOnOverlay = function (event) {
-    if (event.target === event.currentTarget) {
-        closePopup();
-    }
-}
+//const closePopupByClickOnOverlay = function (event) {
+//   if (event.target === event.currentTarget) {
+//        closePopup();
+//   }
+//}
 
-function formSubmitHandler(evt) {
+const formSubmitHandler = function (evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileStatus.textContent = statusInput.value;
@@ -51,7 +47,8 @@ function formSubmitHandler(evt) {
 
 popupOpenButtonElement.addEventListener('click', openPopup);
 popupCloseButtonElement.addEventListener('click', closePopup);
-popupElement.addEventListener('click', closePopupByClickOnOverlay);
+
+//popupElement.addEventListener('click', closePopupByClickOnOverlay);
 
 formElement.addEventListener('submit', formSubmitHandler);
 

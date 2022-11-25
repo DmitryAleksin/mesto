@@ -19,15 +19,13 @@
   </header>
   <main class="content">
     <section class="profile">
-      <div class="profile__frame">
-        <img class="profile__avatar" src="./images/image.png" alt="Фото Жак-Ив Кусто">
-      </div>
+      <img class="profile__avatar" src="./images/image.png" alt="Фото Аватара">
       <div class="profile__info">
         <h1 class="profile__name">Жак-Ив Кусто</h1>
         <button class="profile__square" type="button"></button>
-        <h2 class="profile__status">Исследователь океана</h2>
+        <p class="profile__status">Исследователь океана</p>
       </div>
-      <button class="profile__rectangle" type="button"></button>
+      <button class="profile__rectangle" type="button" aria-label="Close"></button>
     </section>
     <section class="elements">
       <div class="elements__element">
@@ -75,19 +73,19 @@
     </section>
   </main>
   <footer class="footer">
-    <h3 class="footer__copyright">&copy;&nbsp;2022 Dmitry Aleksin</h3>
+    <p class="footer__copyright">&copy;&nbsp;2022 Dmitry Aleksin</p>
   </footer>
-  <section class="popup">
+  <div class="popup">
     <div class="popup__block">
-      <button class="popup__button-close" type="reset"></button>
+      <button class="popup__button-close" type="button"></button>
       <form class="popup__content" name="popup__content">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input class="popup__name" type="text" placeholder="Ваше имя">
-        <input class="popup__status" type="text" placeholder="Ваша профессия">
+        <input class="popup__input popup__input_name" type="text" placeholder="Ваше имя" name="name">
+        <input class="popup__input popup__input_status" type="text" placeholder="Ваша профессия" name="name">
         <button class="popup__button-save" type="submit">Сохранить</button>
       </form>
     </div>
-  </section>
+  </div>
   <script src="./scripts/index.js"></script>
 </body>
 

@@ -1,15 +1,14 @@
 .profile__info {
-    max-height: 120px;
     padding: 0;
     margin: 22px 18px 0 0;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 16px 18px;
+    gap: 0 18px;
 }
 
 @media screen and (max-width: 610px) {
     .profile__info {
-        gap: 14px 10px;
-        margin: 22.25px 19px 0;
+        gap: 9px 10px;
+        margin: 25px auto 0;
     }
 }
