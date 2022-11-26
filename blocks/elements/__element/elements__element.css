@@ -3,6 +3,6 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    min-height: 361px;
+    padding: 0 0 25px;
     border-radius: 10px;
 }
