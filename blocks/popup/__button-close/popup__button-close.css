@@ -7,8 +7,8 @@
     object-fit: cover;
     border: none;
     position: absolute;
-    top: -41px;
-    left: 435px;
+    top: -40px;
+    right: -40px;
     transition: opacity;
     cursor: pointer;
     background-color: transparent;
@@ -24,6 +24,6 @@
         height: 20px;
         top: -36px;
         background-image: url(../../../images/CloseIconmini.svg);
-        left: 264px;
+        right: -36px;
     }
 }

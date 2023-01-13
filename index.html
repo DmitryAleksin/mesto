@@ -28,54 +28,13 @@
       <button class="profile__rectangle" type="button" aria-label="Добавить"></button>
     </section>
     <section class="elements">
-      <div class="elements__element">
-        <img class="elements__photo-element" src="./images/karach.png" alt="Фото замка в&nbsp;Карачаевске">
-        <div class="elements__info-element">
-          <h2 class="elements__name-element">Карачаевск</h2>
-          <button class="elements__heart-element" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img class="elements__photo-element direction" src="./images/elbrus.png" alt="Фото горы Эльбрус">
-        <div class="elements__info-element">
-          <h2 class="elements__name-element">Эльбрус</h2>
-          <button class="elements__heart-element" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img class="elements__photo-element" src="./images/dombay.png" alt="Фото гор Домбай">
-        <div class="elements__info-element">
-          <h2 class="elements__name-element">Домбай</h2>
-          <button class="elements__heart-element" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img class="elements__photo-element direction" src="./images/elbrus.png" alt="Фото горы Эльбрус">
-        <div class="elements__info-element">
-          <h2 class="elements__name-element">Эльбрус</h2>
-          <button class="elements__heart-element" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img class="elements__photo-element" src="./images/dombay.png" alt="Фото гор Домбай">
-        <div class="elements__info-element">
-          <h2 class="elements__name-element">Домбай</h2>
-          <button class="elements__heart-element" type="button"></button>
-        </div>
-      </div>
-      <div class="elements__element">
-        <img class="elements__photo-element" src="./images/karach.png" alt="Фото замка в&nbsp;Карачаевске">
-        <div class="elements__info-element">
-          <h2 class="elements__name-element">Карачаевск</h2>
-          <button class="elements__heart-element" type="button"></button>
-        </div>
-      </div>
     </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy;&nbsp;2022 Dmitry Aleksin</p>
   </footer>
-  <div class="popup">
+  <!--редактирование профиля-->
+  <div class="popup" id="popup-profile">
     <div class="popup__block">
       <button class="popup__button-close" type="button"></button>
       <form class="popup__content" name="popup__content">
@@ -84,6 +43,41 @@
         <input class="popup__input popup__input_status_write" type="text" placeholder="Ваша профессия" name="name">
         <button class="popup__button-save" type="submit">Сохранить</button>
       </form>
+    </div>
+  </div>
+  <!--редактирование фото-->
+  <div class="popup" id="popup-photo-card">
+    <div class="popup__block">
+      <button class="popup__button-close" type="button"></button>
+      <form class="popup__content" id="popup-photo-content" name="popup__content">
+        <h3 class="popup__title">Новое место</h3>
+        <input class="popup__input popup__input_name_write" id="popup-photo-name" type="text" placeholder="Название"
+          name="photoName">
+        <input class="popup__input popup__input_status_write" id="popup-photo-link" type="text"
+          placeholder="Ссылка на картинку" name="photoLink">
+        <button class="popup__button-save" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
+  <!--шаблон фото-->
+  <template id="template-elements">
+    <div class="elements__element">
+      <button class="elements__delete"></button>
+      <img class="elements__photo-element" src="#" alt>
+      <div class="elements__info-element">
+        <h2 class="elements__name-element"></h2>
+        <button class="elements__heart-element"></button>
+      </div>
+    </div>
+  </template>
+  <!--увеличение фото-->
+  <div class="popup popup_background_darker" id="popup-photo-card-zoom">
+    <div class="popup__photo-container">
+      <div class="popup__photo-element">
+        <button class="popup__button-close" type="button"></button>
+        <img class="popup__photo-item" src alt>
+        <h3 class="popup__photo-subtitle"></h3>
+      </div>
     </div>
   </div>
   <script src="./scripts/index.js"></script>
