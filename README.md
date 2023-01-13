@@ -1,4 +1,4 @@
-* [Ссылка на проектную работу](https://dmitryaleksin.github.io/mesto /)
+* [Ссылка на проектную работу](https://dmitryaleksin.github.io/mesto/)
 
 # Проект: Место
 
