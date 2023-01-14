@@ -26,17 +26,18 @@ const initialCards = [
         link: 'https://images.unsplash.com/photo-1582120042072-d01e2fc8f3ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXxsU2czQ1ZYLUlEY3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60'
     }
 ];
- 
+
 // для всех попапов
 const closePopupsButtons = document.querySelectorAll('.popup__button-close');
 
-const popupElement = document.querySelector('#popup-profile');
-const formElement = popupElement.querySelector('.popup__content');
-const nameInput = popupElement.querySelector('.popup__input_name_write');
-const statusInput = popupElement.querySelector('.popup__input_status_write');
+const profilePopup = document.querySelector('#popup-profile');
+const nameInput = profilePopup.querySelector('.popup__input_name_write');
+const statusInput = profilePopup.querySelector('.popup__input_status_write');
+
+const profileForm = document.forms["profile-form"];
 
 
-const popupOpenButtonElement = document.querySelector('.profile__square');
+const profileOpenButton = document.querySelector('.profile__square');
 const popupAddButtonElement = document.querySelector('.profile__rectangle');
 const profileName = document.querySelector('.profile__name');
 const profileStatus = document.querySelector('.profile__status');
@@ -45,7 +46,8 @@ const profileStatus = document.querySelector('.profile__status');
 const popupPhotoElement = document.querySelector('#popup-photo-card');
 const photoName = popupPhotoElement.querySelector('#popup-photo-name');
 const photoLink = popupPhotoElement.querySelector('#popup-photo-link');
-const formPhotoElement = popupPhotoElement.querySelector('#popup-photo-content');
+
+const cardForm = document.forms["card-form"];
 
 // общий контейнер карточек
 const photoCardsContainer = document.querySelector('.elements');
@@ -55,6 +57,9 @@ const photoCardElement = document.querySelector('.elements__element');
 
 // блок профиля
 const openPopupPhotoZoom = document.querySelector('#popup-photo-card-zoom');
+const popupPhotoZoomElement = openPopupPhotoZoom.querySelector('.popup__photo-item');
+const popupPhotoZoomSubtitle = openPopupPhotoZoom.querySelector('.popup__photo-subtitle');
+
 
 // попап профиля
 function openPopup(popupItem) {
@@ -82,7 +87,7 @@ function handleProfileFormSubmit(evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileStatus.textContent = statusInput.value;
-    closePopup(popupElement);
+    closePopup(profilePopup);
 };
 
 
@@ -99,15 +104,13 @@ function generateCard(placeName, link) {
     const addPhoto = addPhotoContainer.querySelector('.elements__photo-element');
     const addPhotoName = addPhotoContainer.querySelector('.elements__name-element');
     const addLike = addPhotoContainer.querySelector('.elements__heart-element');
-    const popupPhotoZoomElement = openPopupPhotoZoom.querySelector('.popup__photo-item');
-    const popupPhotoZoomSubtitle = openPopupPhotoZoom.querySelector('.popup__photo-subtitle');
     const trashBin = addPhotoContainer.querySelector('.elements__delete');
 
     addPhoto.src = link;
     addPhoto.alt = placeName;
     addPhotoName.textContent = placeName;
 
-    addLike.addEventListener('click', addLikeElement);
+    addLike.addEventListener('click', toggleLike);
 
     addPhoto.addEventListener('click', function () {
         popupPhotoZoomElement.src = link;
@@ -115,7 +118,7 @@ function generateCard(placeName, link) {
         popupPhotoZoomSubtitle.textContent = placeName;
         openPopup(openPopupPhotoZoom);
     });
- 
+
     trashBin.addEventListener('click', deletePhotoCard);
 
     return addPhotoContainer;
@@ -127,7 +130,7 @@ const deletePhotoCard = (evt) => {
 };
 
 // добавление лайка
-const addLikeElement = (evt) => {
+const toggleLike = (evt) => {
     evt.target.classList.toggle('elements__heart-element_active');
 };
 
@@ -151,18 +154,18 @@ closePopupsButtons.forEach((button) => {
 
 popupAddButtonElement.addEventListener('click', openPopupPhotoCard);
 
-popupOpenButtonElement.addEventListener('click', () => {
-    openPopup(popupElement);
+profileOpenButton.addEventListener('click', () => {
+    openPopup(profilePopup);
     addProfileInfo();
 });
 
-popupElement.addEventListener('submit', handleProfileFormSubmit);
+profilePopup.addEventListener('submit', handleProfileFormSubmit);
 
 popupPhotoElement.addEventListener('submit', function (evt) {
     evt.preventDefault();
     renderCard(photoName.value, photoLink.value);
-    formPhotoElement.reset();
+    cardForm.reset();
     closePopup(popupPhotoElement);
 });
 
-//popupElement.addEventListener('click', closePopupByClickOnOverlay);
+//profilePopup.addEventListener('click', closePopupByClickOnOverlay);
